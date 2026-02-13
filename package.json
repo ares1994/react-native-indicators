@@ -3,7 +3,6 @@
   "version": "0.17.0",
   "license": "BSD-3-Clause",
   "author": "Alexander Nazarov <n4kz@n4kz.com>",
-
   "description": "Activity indicator collection",
   "keywords": [
     "react",
@@ -17,32 +16,33 @@
     "pacman",
     "material"
   ],
-
   "main": "index.js",
-  "files": ["index.js", "src/*", "license.txt", "readme.md", "changelog.md"],
-
+  "files": [
+    "index.js",
+    "src/*",
+    "license.txt",
+    "readme.md",
+    "changelog.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/n4kz/react-native-indicators.git"
   },
-
   "peerDependencies": {
+    "prop-types": "^15.0.0",
     "react": "*",
     "react-native": "*"
   },
-
   "devDependencies": {
-    "babel-eslint": "^10.0.0",
-    "eslint": "^6.4.0",
-    "eslint-plugin-react": "^7.1.0",
-    "eslint-plugin-react-native": "^3.7.0"
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "^7.26.5",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-native": "^5.0.0",
+    "metro-react-native-babel-preset": "^0.77.0",
+    "prop-types": "^15.8.1"
   },
-
   "scripts": {
     "lint": "eslint index.js src example/index.js example/app.js"
-  },
-
-  "dependencies": {
-    "prop-types": "^15.5.10"
   }
 }
