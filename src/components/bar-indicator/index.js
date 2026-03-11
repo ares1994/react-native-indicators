@@ -55,7 +55,7 @@ export default class BarIndicator extends PureComponent {
       .from(new Array(samples + 1), (item, index) => index / samples);
 
     let
-      width  = Math.floor(size / 5),
+      width = Math.floor(size / 5),
       height = Math.floor(size / 2),
       radius = Math.ceil(width / 2);
 
@@ -94,7 +94,7 @@ export default class BarIndicator extends PureComponent {
     };
 
     return (
-      <View style={containerStyle} {...{ key: index }}>
+      <View style={containerStyle} key={index}>
         <Animated.View style={topStyle} />
         <Animated.View style={bottomStyle} />
       </View>

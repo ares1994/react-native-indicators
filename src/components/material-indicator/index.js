@@ -44,8 +44,8 @@ export default class MaterialIndicator extends PureComponent {
     let outputRange = Array
       .from(new Array(frames), (item, frameIndex) => {
         let progress = 2 * sequences * frameIndex / (frames - 1);
-        let rotation = index?
-          +(360 - sa):
+        let rotation = index ?
+          +(360 - sa) :
           -(180 - sa);
 
         let sequence = Math.ceil(progress);
@@ -56,8 +56,8 @@ export default class MaterialIndicator extends PureComponent {
           progress = sequence - progress;
         }
 
-        let direction = index?
-          -1:
+        let direction = index ?
+          -1 :
           +1;
 
         return (direction * (180 - (sa + ea)) * easing(progress) + rotation) + 'deg';
@@ -80,8 +80,8 @@ export default class MaterialIndicator extends PureComponent {
       width: size,
       height: size,
       transform: [{
-        translateY: index?
-          -size / 2:
+        translateY: index ?
+          -size / 2 :
           0,
       }, {
         rotate: progress.interpolate({ inputRange, outputRange }),
@@ -94,8 +94,8 @@ export default class MaterialIndicator extends PureComponent {
       overflow: 'hidden',
     };
 
-    let offsetStyle = index?
-      { top: size / 2 }:
+    let offsetStyle = index ?
+      { top: size / 2 } :
       null;
 
     let lineStyle = {
@@ -107,7 +107,7 @@ export default class MaterialIndicator extends PureComponent {
     };
 
     return (
-      <Animated.View style={styles.layer} {...{ key: index }}>
+      <Animated.View style={styles.layer} key={index}>
         <Animated.View style={layerStyle}>
           <Animated.View style={[containerStyle, offsetStyle]} collapsable={false}>
             <Animated.View style={viewportStyle}>

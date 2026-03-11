@@ -37,21 +37,21 @@ export default class PulseIndicator extends PureComponent {
       transform: [{
         scale: progress.interpolate({
           inputRange: [0, 0.67, 1],
-          outputRange: index?
-            [0.4, 0.6, 0.4]:
+          outputRange: index ?
+            [0.4, 0.6, 0.4] :
             [0.4, 0.6, 1.0],
         }),
       }],
       opacity: progress.interpolate({
         inputRange: [0, 0.67, 1],
-        outputRange: index?
-          [1.0, 1.0, 1.0]:
+        outputRange: index ?
+          [1.0, 1.0, 1.0] :
           [0.5, 0.5, 0.0],
       }),
     };
 
     return (
-      <Animated.View style={styles.layer} {...{ key: index }}>
+      <Animated.View style={styles.layer} key={index}>
         <Animated.View style={pulseStyle} />
       </Animated.View>
     );
